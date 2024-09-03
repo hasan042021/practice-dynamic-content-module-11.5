@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<div class="container m-auto row row-cols-1 row-cols-md-3 g-4 p-2">
+  {% for i in data %}
+  <div class="col">
+    <div class="card">
+      <img src="{{i.strMealThumb}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text small my-0 py-0">ID meal: {{i.idMeal}}</p>
+        <h6 class="card-title">{{i.strMeal}}</h6>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
